@@ -17,6 +17,8 @@ class _SebhaTabState extends State<SebhaTab> {
   int zekrIndex = 0;
   int counter = 0;
 
+  double turn = 0.0;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -36,8 +38,12 @@ class _SebhaTabState extends State<SebhaTab> {
                   ),
                   Positioned(
                     top: 73,
-                    child: Image.asset(
-                      "assets/images/body_sebha_logo.png",
+                    child: AnimatedRotation(
+                      turns: turn,
+                      duration: const Duration(milliseconds: 10),
+                      child: Image.asset(
+                        "assets/images/body_sebha_logo.png",
+                      ),
                     ),
                   ),
                 ],
@@ -86,6 +92,14 @@ class _SebhaTabState extends State<SebhaTab> {
       } else {
         zekrIndex = 0;
       }
+    }
+    rotateSebha();
+    setState(() {});
+  }
+
+  void rotateSebha() {
+    if (counter > 0) {
+      turn += 1 / 30;
     }
     setState(() {});
   }
