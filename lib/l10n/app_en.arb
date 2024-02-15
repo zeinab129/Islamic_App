@@ -4,5 +4,9 @@
   "no_of_verses": "Number of Verses",
   "name_of_sura": "Name of Sura",
   "quran_radio_chanel": "Quraan Radio Chanel",
-  "no_of_tasbeh": "Number of Tasbehat"
+  "no_of_tasbeh": "Number of Tasbehat",
+  "language": "Language",
+  "theme": "Theme",
+  "arabic": "Arabic",
+  "light": "Light"
 }
