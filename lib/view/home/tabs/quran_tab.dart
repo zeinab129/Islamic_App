@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamic_app/model/sura_model.dart';
 import 'package:islamic_app/my_theme/my_theme.dart';
 import 'package:islamic_app/view/sura_details_screen.dart';
@@ -259,19 +259,19 @@ class QuranTab extends StatelessWidget {
                 TableRow(
                     decoration: const BoxDecoration(
                       border: BorderDirectional(
-                          bottom:
-                              BorderSide(width: 3, color: MyTheme.primaryColor)),
+                          bottom: BorderSide(
+                              width: 3, color: MyTheme.primaryColor)),
                     ),
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text("عدد الآيات",
+                        child: Text(AppLocalizations.of(context)!.no_of_verses,
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.bodyMedium),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text("اسم السورة",
+                        child: Text(AppLocalizations.of(context)!.name_of_sura,
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.bodyMedium),
                       ),

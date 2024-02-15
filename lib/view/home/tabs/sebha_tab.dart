@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_app/my_theme/my_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SebhaTab extends StatefulWidget {
   const SebhaTab({super.key});
@@ -53,7 +54,7 @@ class _SebhaTabState extends State<SebhaTab> {
             const SizedBox(
               height: 24,
             ),
-            const Text("عدد التسبيحات"),
+            Text(AppLocalizations.of(context)!.no_of_tasbeh),
             const SizedBox(
               height: 24,
             ),
