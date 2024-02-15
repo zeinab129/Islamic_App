@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_app/home/home_screen.dart';
+import 'package:islamic_app/view/hadeeth_details_screen.dart';
+import 'package:islamic_app/view/home/home_screen.dart';
 import 'package:islamic_app/my_theme/my_theme.dart';
-import 'package:islamic_app/sura_details_screen.dart';
+import 'package:islamic_app/view/sura_details_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,8 +20,12 @@ class MyApp extends StatelessWidget {
       darkTheme: MyTheme.darkTheme,
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
-        SuraDetailsScreen.routeName: (context) => const SuraDetailsScreen()
+        SuraDetailsScreen.routeName: (context) => const SuraDetailsScreen(),
+        HadeethDetailsScreen.routeName: (context) =>
+            const HadeethDetailsScreen()
       },
     );
   }
+
+  loadHadeethFile() {}
 }

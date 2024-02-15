@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_app/my_theme/my_theme.dart';
 
 class SebhaTab extends StatefulWidget {
   const SebhaTab({super.key});
@@ -60,7 +61,7 @@ class _SebhaTabState extends State<SebhaTab> {
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
-                  color: const Color(0xffB7935F).withOpacity(0.57)),
+                  color: MyTheme.primaryColor.withOpacity(0.57)),
               child: Text(counter.toString()),
             ),
             const SizedBox(
@@ -69,7 +70,7 @@ class _SebhaTabState extends State<SebhaTab> {
             ElevatedButton(
               onPressed: onClick,
               style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xffB7935F),
+                  backgroundColor: MyTheme.primaryColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(24))),
               child: Text(

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islamic_app/model/sura_model.dart';
-import 'package:islamic_app/sura_details_screen.dart';
+import 'package:islamic_app/my_theme/my_theme.dart';
+import 'package:islamic_app/view/sura_details_screen.dart';
 
 class QuranTab extends StatelessWidget {
   QuranTab({super.key});
@@ -251,15 +252,15 @@ class QuranTab extends StatelessWidget {
           child: SingleChildScrollView(
             child: Table(
               border: const TableBorder(
-                  top: BorderSide(width: 3, color: Color(0xffB7935F)),
+                  top: BorderSide(width: 3, color: MyTheme.primaryColor),
                   verticalInside:
-                      BorderSide(width: 3, color: Color(0xffB7935F))),
+                      BorderSide(width: 3, color: MyTheme.primaryColor)),
               children: [
                 TableRow(
                     decoration: const BoxDecoration(
                       border: BorderDirectional(
                           bottom:
-                              BorderSide(width: 3, color: Color(0xffB7935F))),
+                              BorderSide(width: 3, color: MyTheme.primaryColor)),
                     ),
                     children: [
                       Padding(
