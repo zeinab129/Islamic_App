@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyTheme {
+  static const Color primaryColor = Color(0XFFB7935F);
+
   static ThemeData lightTheme = ThemeData(
       brightness: Brightness.light,
       textTheme: TextTheme(
@@ -26,6 +28,7 @@ class MyTheme {
             fontSize: 30, fontWeight: FontWeight.w700, color: Colors.black),
         iconTheme: const IconThemeData(color: Colors.black, size: 30),
         centerTitle: true,
+        elevation: 0
       ));
 
   static ThemeData darkTheme = ThemeData();
