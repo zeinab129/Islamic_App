@@ -1,12 +1,17 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islamic_app/my_theme/my_theme.dart';
+import 'package:islamic_app/providers/my_provider.dart';
+import 'package:provider/provider.dart';
 
 class RadioTab extends StatelessWidget {
   const RadioTab({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
+
     return SizedBox(
       width: double.infinity,
       child: Column(
@@ -25,19 +30,31 @@ class RadioTab extends StatelessWidget {
             children: [
               IconButton(
                   onPressed: onPreviousPressed,
-                  icon: const Icon(Icons.skip_previous,
-                      color: MyTheme.primaryColor, size: 45)),
+                  icon: Transform(
+                    alignment: Alignment.center,
+                    transform: provider.languageCode == "ar"
+                        ? Matrix4.rotationY(pi)
+                        : Matrix4.rotationY(0),
+                    child: Icon(Icons.skip_previous,
+                        color: provider.getPrimaryColor(), size: 45),
+                  )),
               IconButton(
                   onPressed: onPlayPressed,
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.play_arrow,
-                    color: MyTheme.primaryColor,
+                    color: provider.getPrimaryColor(),
                     size: 64,
                   )),
               IconButton(
                   onPressed: onNextPressed,
-                  icon: const Icon(Icons.skip_next,
-                      color: MyTheme.primaryColor, size: 45))
+                  icon: Transform(
+                    alignment: Alignment.center,
+                    transform: provider.languageCode == "ar"
+                        ? Matrix4.rotationY(pi)
+                        : Matrix4.rotationY(0),
+                    child: Icon(Icons.skip_next,
+                        color: provider.getPrimaryColor(), size: 45),
+                  ))
             ],
           )
         ],

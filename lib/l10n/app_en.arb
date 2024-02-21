@@ -1,12 +1,15 @@
 {
   "app_name": "Islami",
   "ahadeeth": "Ahadeeth",
-  "no_of_verses": "Number of Verses",
-  "name_of_sura": "Name of Sura",
+  "no_of_verses": "No. Verses",
+  "name_of_sura": "Sura Nane",
   "quran_radio_chanel": "Quraan Radio Chanel",
-  "no_of_tasbeh": "Number of Tasbehat",
+  "no_of_tasbeh": "No. Tasbehat",
   "language": "Language",
   "theme": "Theme",
   "arabic": "Arabic",
-  "light": "Light"
+  "light": "Light",
+  "dark": "Dark",
+  "english": "English",
+  "arabic": "Arabic"
 }

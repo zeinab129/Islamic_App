@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_app/model/hadeth_model.dart';
+import 'package:islamic_app/providers/my_provider.dart';
+import 'package:provider/provider.dart';
 
 class HadeethDetailsScreen extends StatelessWidget {
   static const String routeName = "HADEETH_DETAILS_SCREEN";
@@ -11,11 +13,13 @@ class HadeethDetailsScreen extends StatelessWidget {
     HadethModel hadethModel =
         ModalRoute.of(context)!.settings.arguments as HadethModel;
 
+    var provider = Provider.of<MyProvider>(context);
+
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
-                "assets/images/bg_image.png",
+                provider.getBackgroundPath(),
               ),
               fit: BoxFit.fill)),
       child: Scaffold(
@@ -26,7 +30,7 @@ class HadeethDetailsScreen extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           margin: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: Colors.grey.withOpacity(0.5),
+            color: provider.getBgTansColor(),
             borderRadius: BorderRadius.circular(12),
           ),
           child: ListView.builder(
