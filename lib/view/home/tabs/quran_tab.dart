@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamic_app/model/sura_model.dart';
-import 'package:islamic_app/my_theme/my_theme.dart';
-import 'package:islamic_app/view/sura_details_screen.dart';
+import 'package:islamic_app/providers/my_provider.dart';
+import 'package:islamic_app/view/sura_detsils/sura_details_screen.dart';
+import 'package:provider/provider.dart';
 
 class QuranTab extends StatelessWidget {
   QuranTab({super.key});
@@ -242,6 +243,8 @@ class QuranTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
+
     return Column(
       children: [
         Container(
@@ -251,16 +254,16 @@ class QuranTab extends StatelessWidget {
         Expanded(
           child: SingleChildScrollView(
             child: Table(
-              border: const TableBorder(
-                  top: BorderSide(width: 3, color: MyTheme.primaryColor),
+              border: TableBorder(
+                  top: BorderSide(width: 3, color: provider.getPrimaryColor()),
                   verticalInside:
-                      BorderSide(width: 3, color: MyTheme.primaryColor)),
+                      BorderSide(width: 3, color: provider.getPrimaryColor())),
               children: [
                 TableRow(
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       border: BorderDirectional(
                           bottom: BorderSide(
-                              width: 3, color: MyTheme.primaryColor)),
+                              width: 3, color: provider.getPrimaryColor())),
                     ),
                     children: [
                       Padding(
