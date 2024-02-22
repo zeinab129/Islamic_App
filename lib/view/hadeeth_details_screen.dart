@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_app/model/hadeth_model.dart';
+import 'package:islamic_app/my_theme/my_theme.dart';
 import 'package:islamic_app/providers/my_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -37,7 +38,10 @@ class HadeethDetailsScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               return Text(
                 hadethModel.content[index],
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    color: provider.themeMode == ThemeMode.light
+                        ? MyTheme.blackColor
+                        : MyTheme.yellowColor),
                 textAlign: TextAlign.center,
               );
             },
