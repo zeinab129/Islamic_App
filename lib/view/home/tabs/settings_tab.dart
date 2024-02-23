@@ -56,6 +56,7 @@ class SettingsTab extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
+              print(provider.themeMode);
               showModalBottomSheet(
                   context: context,
                   builder: (context) {

@@ -33,6 +33,6 @@ class MyApp extends StatelessWidget {
         HadeethDetailsScreen.routeName: (context) =>
             const HadeethDetailsScreen()
       },
-    );
-  }
+  );
+}
 }

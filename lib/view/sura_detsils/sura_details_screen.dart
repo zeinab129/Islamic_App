@@ -46,7 +46,10 @@ class SuraDetailsScreen extends StatelessWidget {
                       "${provider.verses[index]} {${index + 1}}",
                       textAlign: TextAlign.center,
                       textDirection: TextDirection.rtl,
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          color: mainProvider.themeMode == ThemeMode.light
+                              ? MyTheme.blackColor
+                              : MyTheme.yellowColor),
                     );
                   },
                   itemCount: provider.verses.length,
