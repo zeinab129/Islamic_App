@@ -2,7 +2,7 @@
   "app_name": "Islami",
   "ahadeeth": "Ahadeeth",
   "no_of_verses": "No. Verses",
-  "name_of_sura": "Sura Nane",
+  "name_of_sura": "Sura Name",
   "quran_radio_chanel": "Quraan Radio Chanel",
   "no_of_tasbeh": "No. Tasbehat",
   "language": "Language",
@@ -10,6 +10,5 @@
   "arabic": "Arabic",
   "light": "Light",
   "dark": "Dark",
-  "english": "English",
-  "arabic": "Arabic"
+  "english": "English"
 }

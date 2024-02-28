@@ -2,7 +2,7 @@
   "app_name": "إسلامى",
   "ahadeeth": "الأحاديث",
   "no_of_verses": "عدد الآيات",
-  "name_of_sura": "عدد السور",
+  "name_of_sura": "إسم السور",
   "quran_radio_chanel": "إذاعة القرآن الكريم",
   "no_of_tasbeh": "عدد التسبيحات",
   "language": "اللغة",
@@ -10,6 +10,5 @@
   "arabic": "العربية",
   "light": "منبر",
   "dark": "مظلم",
-  "english": "الإنجليزية",
-  "arabic": "العربية"
+  "english": "الإنجليزية"
 }

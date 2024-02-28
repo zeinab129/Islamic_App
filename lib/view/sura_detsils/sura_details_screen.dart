@@ -49,7 +49,7 @@ class SuraDetailsScreen extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           color: mainProvider.themeMode == ThemeMode.light
                               ? MyTheme.blackColor
-                              : MyTheme.yellowColor),
+                              : MyTheme.primaryDarkColor),
                     );
                   },
                   itemCount: provider.verses.length,

@@ -268,26 +268,19 @@ class QuranTab extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(AppLocalizations.of(context)!.no_of_verses,
+                        child: Text(AppLocalizations.of(context)!.name_of_sura,
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.bodyMedium),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(AppLocalizations.of(context)!.name_of_sura,
+                        child: Text(AppLocalizations.of(context)!.no_of_verses,
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.bodyMedium),
                       ),
                     ]),
                 for (String sura in suraNames)
                   TableRow(children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                          versesNumber[suraNames.indexOf(sura)].toString(),
-                          textAlign: TextAlign.center,
-                          style: Theme.of(context).textTheme.bodyMedium),
-                    ),
                     InkWell(
                       onTap: () {
                         Navigator.pushNamed(
@@ -302,6 +295,13 @@ class QuranTab extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.bodyMedium),
                       ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                          versesNumber[suraNames.indexOf(sura)].toString(),
+                          textAlign: TextAlign.center,
+                          style: Theme.of(context).textTheme.bodyMedium),
                     ),
                   ])
               ],

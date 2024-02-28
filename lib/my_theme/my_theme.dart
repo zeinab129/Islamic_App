@@ -3,9 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 class MyTheme {
   static const Color primaryColor = Color(0XFFB7935F);
-  static const Color primaryDarkColor = Color(0XFF141A2E);
+  static const Color primaryDarkColor = Color(0XFFFACC1D);
+  static const Color whiteColor = Color(0XFFF8F8F8);
   static const Color blackColor = Color(0XFF242424);
-  static const Color yellowColor = Color(0XFFFACC1D);
+  static const Color darkBgColor = Color(0XFF141A2E);
 
   static ThemeData lightTheme = ThemeData(
       brightness: Brightness.light,
@@ -44,9 +45,9 @@ class MyTheme {
           bodySmall:
               GoogleFonts.elMessiri(fontSize: 20, fontWeight: FontWeight.w400)),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          backgroundColor: MyTheme.primaryDarkColor,
+          backgroundColor: MyTheme.darkBgColor,
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: MyTheme.yellowColor,
+          selectedItemColor: primaryDarkColor,
           unselectedItemColor: Colors.white,
           showSelectedLabels: false,
           showUnselectedLabels: false,

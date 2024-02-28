@@ -41,7 +41,7 @@ class HadeethDetailsScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.bodySmall!.copyWith(
                     color: provider.themeMode == ThemeMode.light
                         ? MyTheme.blackColor
-                        : MyTheme.yellowColor),
+                        : MyTheme.primaryDarkColor),
                 textAlign: TextAlign.center,
               );
             },
